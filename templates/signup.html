@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <h1>Register for the blog</h1>
+        <style>
+        .error { color: red; }
+        </style>
+    <body>
+        <form action="/signup" method="post">
+            <label for="username">username:</label>
+            <input name="username" id="username" type="text" value="{{username}}" />
+            <p class="error">{{username_error}}</p>
+            <label for="password">password:</label>
+            <input name="password" id="password" type="password" value="{{password}}" />
+            <p class="error">{{password_error}}</p>
+            <label for="verify-pword">confirm password:</label>
+            <input name="pass_word2" id="verify-pword" type="password" value="{{pass_word2}}" />
+            <p class="error">{{match_error}}</p>
+            <input type="submit" />
+        </form>
+    </body>
+</html>

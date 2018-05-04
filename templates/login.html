@@ -1,0 +1,22 @@
+<!doctype html>
+
+<h1>Log in to the blog!</h1>
+<html>
+    <h1>Login</h1>
+    <p>If you don't have an account, you may <a href="/signup">register</a> for one</p>
+        <style>
+        .error { color: red; }
+        </style>
+    <body>
+        <form action="/login" method="post">
+            <label for="username">username:</label>
+            <input name="username" id="username" type="text" value="{{username}}" />
+            <p class="error">{{username_error}}</p>
+            <label for="password">password:</label>
+            <input name="password" id="password" type="password" value="{{password}}" />
+            <p class="error">{{password_error}}</p>
+            
+            <input type="submit" />
+        </form>
+    </body>
+</html>

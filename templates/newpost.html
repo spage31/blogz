@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action=/newpost method='post'>
+        <label>
+            Post name:
+            <input type="text" name='blg_name' />
+        </label>
+        <p class="error">{{name_error}}</p>
+        <div>
+        </div>
+        <label>
+            Your blog:
+            <div>
+            </div>
+            <textarea cols="40" rows="10" name='blogpost'></textarea>
+        </label>
+        <p class="error">{{content_error}}</p>
+        <div>
+        </div>
+        <input type="submit" value='Submit' />
+    </form>
+
+    <hr />
+
+    <p><a href="{{ url_for('index') }}">Go back to home</p>
+    {% endblock %}
